@@ -1,0 +1,134 @@
+-- Gui2Lua v3.2
+
+local ScreenGui = Instance.new('ScreenGui')
+local Frame = Instance.new('Frame')
+local TextButton = Instance.new('TextButton')
+local LocalScript = Instance.new('LocalScript')
+local TextLabel = Instance.new('TextLabel')
+local TextButton2 = Instance.new('TextButton')
+local LocalScript_2 = Instance.new('LocalScript')
+
+ScreenGui.Enabled = true
+ScreenGui.DisplayOrder = 0
+ScreenGui.ResetOnSpawn = true
+ScreenGui.IgnoreGuiInset = false
+ScreenGui.Archivable = true
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game:GetService('CoreGui')
+
+Frame.LayoutOrder = 0
+Frame.Active = true
+Frame.Selectable = false
+Frame.AnchorPoint = Vector2.new(0, 0)
+Frame.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Frame.ZIndex = 1
+Frame.Archivable = true
+Frame.Size = UDim2.new(0, 353, 0, 213)
+Frame.NextSelectionUp = nil
+Frame.NextSelectionRight = nil
+Frame.NextSelectionLeft = nil
+Frame.ClipsDescendants = false
+Frame.BorderColor3 = Color3.fromRGB(4, 6, 8)
+Frame.NextSelectionDown = nil
+Frame.Visible = true
+Frame.Style = Enum.FrameStyle.Custom
+Frame.Rotation = 0
+Frame.SelectionImageObject = nil
+Frame.Position = UDim2.new(0.6053763628005981, 0, 0.05074627697467804, 0)
+Frame.BorderSizePixel = 5
+Frame.BorderMode = Enum.BorderMode.Outline
+Frame.BackgroundTransparency = 0
+Frame.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
+Frame.Parent = ScreenGui
+Frame.Draggable = true
+
+TextButton.LayoutOrder = 0
+TextButton.TextWrapped = true
+TextButton.LineHeight = 1
+TextButton.Active = true
+TextButton.TextStrokeTransparency = 1
+TextButton.TextTruncate = Enum.TextTruncate.None
+TextButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextButton.ZIndex = 1
+TextButton.BorderSizePixel = 3
+TextButton.RichText = false
+TextButton.Modal = false
+TextButton.AutoButtonColor = true
+TextButton.TextYAlignment = Enum.TextYAlignment.Center
+TextButton.TextScaled = false
+TextButton.BackgroundColor3 = Color3.fromRGB(95, 95, 95)
+TextButton.BorderMode = Enum.BorderMode.Outline
+TextButton.Selectable = true
+TextButton.AnchorPoint = Vector2.new(0, 0)
+TextButton.TextXAlignment = Enum.TextXAlignment.Center
+TextButton.TextTransparency = 0
+TextButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.NextSelectionRight = nil
+TextButton.Selected = false
+TextButton.Archivable = true
+TextButton.Size = UDim2.new(0, 323, 0, 122)
+TextButton.TextSize = 55
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.NextSelectionDown = nil
+TextButton.ClipsDescendants = false
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Text = 'Get all Items'
+TextButton.NextSelectionUp = nil
+TextButton.NextSelectionLeft = nil
+TextButton.Rotation = 0
+TextButton.Font = Enum.Font.Cartoon
+TextButton.SelectionImageObject = nil
+TextButton.Visible = true
+TextButton.Style = Enum.ButtonStyle.Custom
+TextButton.Position = UDim2.new(0.04249291867017746, 0, 0.28169015049934387, 0)
+TextButton.BackgroundTransparency = 0
+TextButton.Parent = Frame
+TextButton.MouseButton1Down:Connect(function()
+for _,v in pairs(game.Players.LocalPlayer.Weapons:GetDescendants()) do
+if v:IsA("BoolValue") and v.Value == false then
+v.Value = true
+  end
+ end
+end)
+
+LocalScript.Disabled = false
+LocalScript.Archivable = true
+LocalScript.Parent = TextButton
+
+TextLabel.LayoutOrder = 0
+TextLabel.TextWrapped = false
+TextLabel.LineHeight = 1
+TextLabel.Active = false
+TextLabel.TextStrokeTransparency = 1
+TextLabel.TextTruncate = Enum.TextTruncate.None
+TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel.ZIndex = 1
+TextLabel.BorderSizePixel = 1
+TextLabel.RichText = false
+TextLabel.NextSelectionDown = nil
+TextLabel.TextYAlignment = Enum.TextYAlignment.Center
+TextLabel.TextScaled = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+TextLabel.BorderMode = Enum.BorderMode.Outline
+TextLabel.Selectable = false
+TextLabel.AnchorPoint = Vector2.new(0, 0)
+TextLabel.NextSelectionRight = nil
+TextLabel.TextXAlignment = Enum.TextXAlignment.Center
+TextLabel.Archivable = true
+TextLabel.Size = UDim2.new(0, 151, 0, 50)
+TextLabel.TextTransparency = 0
+TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 20
+TextLabel.ClipsDescendants = false
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.Text = 'Check Inventory after pressed'
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.NextSelectionUp = nil
+TextLabel.Rotation = 0
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.SelectionImageObject = nil
+TextLabel.NextSelectionLeft = nil
+TextLabel.Visible = true
+TextLabel.Position = UDim2.new(0, 0, 0, 0)
+TextLabel.BackgroundTransparency = 0
+TextLabel.Parent = Frame
